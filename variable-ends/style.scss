@@ -1,0 +1,26 @@
+:root {
+    --box-color: #373142;
+  }
+  .container {
+    --box-color: rgb(247, 129, 129);
+    display: grid;
+    background: var(--box-color);
+    grid: 100px / repeat(2, 1fr 3fr);
+    grid-gap: 10px;
+    > div {
+      --box-color: rgb(102, 102, 255);
+      background: var(--box-color);
+      color: #FFF;
+      text-align: center;
+      line-height: 100px;
+      &:nth-child(1) {
+        grid-column: 1 / -1;
+      }
+      &:nth-child(2) {
+        grid-area: 2 / 2 / 5 / 3;
+      }
+      &:nth-child(3) {
+        grid-area: 4 / 4 / 5 / -1;
+      }
+    }
+  }

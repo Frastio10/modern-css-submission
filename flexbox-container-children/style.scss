@@ -1,0 +1,27 @@
+.container {
+    border: dashed 2px red;
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    // flex-wrap: wrap;       
+    > div {
+      background: black;
+      color: #FFF;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      border: solid 1px blue;
+      &:nth-child(2) {
+        height: 150px;
+        flex: 0 1 auto;
+      }
+      &:nth-child(3) {
+        flex-grow: 3;
+        height: 150px;
+        align-self: flex-end;
+      }
+    }
+  }
